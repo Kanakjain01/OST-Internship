@@ -1,0 +1,409 @@
+body {
+  background-color: rgb(41, 40, 40);
+}
+.navigation {
+  background-color: black;
+}
+.blogs {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.blogs-list {
+  width: 60%;
+}
+
+.blog-item {
+  background-color: rgba(0, 0, 0, 0.377);
+  color: white;
+  margin: 15px 0px;
+  padding: 30px 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.blog-heading {
+  border-image: round;
+  display: flex;
+
+  justify-content: space-between;
+}
+.blog-image {
+  width: 30%;
+}
+.blog-image img {
+  height: 11rem;
+  border-radius: 20px;
+}
+.blog-title {
+  width: 63%;
+
+  margin: 5px 0px;
+}
+.row-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list {
+  background-color: rgb(48, 47, 47);
+  width: 150px;
+  text-align: center;
+  height: 20px;
+}
+
+.list h2 {
+  font-size: 12px;
+}
+.title {
+  font-weight: 600;
+  font-size: x-large;
+  word-spacing: 5px;
+}
+.blog-time {
+  display: flex;
+  align-items: center;
+  letter-spacing: 2px;
+}
+.blog-time div {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.blog-description {
+  margin: 20px 0px;
+}
+.continue-btn button {
+  padding: 5px 10px;
+  background-color: rgb(17, 4, 56);
+  color: white;
+  border-radius: 10px;
+}
+
+/* ---------------------------------------------------------------events------------------------------- */
+
+.events {
+  width: 30%;
+
+  padding: 15px 0px;
+}
+
+.event-item {
+  /* padding: 5px; */
+  padding: 20px 20px;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.377);
+}
+.event-image {
+  display: flex;
+}
+.event-image h1 {
+  color: aliceblue;
+  font-size: 30px;
+}
+.event-description {
+  width: 70%;
+  color: white;
+}
+
+.right-list {
+  width: 150%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 10px;
+}
+
+.lists {
+  background-color: rgb(48, 47, 47);
+  width: 120px;
+  text-align: center;
+  height: 20px;
+}
+
+.lists h2 {
+  font-size: 12px;
+}
+
+.lists1 img {
+  width: 100px;
+  height: 65px;
+}
+
+.right-list1 {
+  width: 150%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.event-item1 {
+  padding: 20px 20px;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.377);
+}
+
+.advertisement-code {
+  background-color: rgba(0, 0, 0, 0.377);
+}
+
+.advertisement-code img {
+  border-radius: 50px;
+  padding: 20px 20px;
+}
+
+/*---------------------------------------------------------------UPCOMING EVENTS------------------------------------*/
+
+.popular-item {
+  background-color: rgba(0, 0, 0, 0.377);
+  color: white;
+
+  padding: 20px 20px;
+}
+
+.popular-heading {
+  font-size: 25px;
+}
+
+.popular-image {
+  width: 30%;
+}
+
+.popular-image img {
+  height: 120px;
+  border-radius: 10px;
+}
+
+.popular-title {
+  width: 60%;
+}
+
+.post-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popular-list {
+  background-color: rgb(48, 47, 47);
+  width: 190px;
+  text-align: center;
+}
+
+.popular-time div {
+  display: flex;
+  align-items: center;
+}
+
+/*--------------------------------------------------------- STAY INFORMED----------------------------- */
+
+.stay-informed {
+  background-color: rgba(0, 0, 0, 0.377);
+  padding: 50px;
+}
+
+.titles {
+  text-align: center;
+}
+.titles h1 {
+  color: aliceblue;
+  font-size: x-large;
+}
+
+.titles h2 {
+  color: gainsboro;
+
+  padding: 10px 50px 30px 60px;
+}
+
+.buttons input {
+  width: 90%;
+}
+
+.buttons button {
+  width: 90%;
+}
+
+/*--------------------------------------------------------JOBS----------------------------------------------*/
+
+.travel-post {
+  background-color: rgba(0, 0, 0, 0.377);
+  color: white;
+
+  padding: 20px 20px;
+}
+
+.travel-heading {
+  font-size: 25px;
+}
+
+.travel-image {
+  width: 100%;
+}
+
+.travel-title {
+  padding: 10px 10px 0px 0px;
+}
+.travel-image img {
+  height: 150px;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.travelling {
+  width: 100%;
+  font-size: 20px;
+}
+
+.travel-list {
+  font-size: 16px;
+  background-color: rgb(48, 47, 47);
+  width: 165px;
+  text-align: center;
+}
+
+.travelled {
+  display: flex;
+  width: 100%;
+}
+.travel-time div {
+  color: gray;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  background-color: black;
+}
+
+/*-------------------------------------------------------- NEWS FEED -------------------------------------*/
+.newsfeed {
+  padding: 20px 20px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.377);
+}
+
+.newsfeed-heading {
+  color: white;
+  font-size: 28px;
+}
+.news {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.news-image {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.news-content {
+  flex: 1;
+}
+
+.news-title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.news-description {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.news-date {
+  font-size: 12px;
+  color: #999;
+}
+
+
+
+/* responsive */
+
+@media screen and (max-width: 375px) {
+  .blogs{
+    display: flex;
+    flex-direction: column;
+  }
+  .blogs-list{
+    width: 90%;
+    margin: auto;
+  }
+
+  .blog-item{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-heading{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-image{
+    width: 100%;
+  }
+  .blog-title{
+    width: 100%;
+
+  }
+  .blog-title .title{
+    font-size: 18px;
+  }
+  .blog-time div {
+    margin: 2px 5px;
+  }
+  .blog-description{
+    margin: 10px 0px;
+  }
+  .row-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .list{
+    width: fit-content;
+    padding: 2px 5px ;
+    margin: 2px 0px 4px 0px;
+  }
+  .continue-btn{
+    margin: auto;
+    padding: 4px 8px;
+  }
+
+
+  .events{
+    width: 90%;
+    margin: auto;
+  }
+
+ 
+
+  .travel-list{
+    width: 120px;
+    font-size: 11px;
+  }
+
+  .travelling{
+    font-size: 14px;
+  }
+
+  .travel-heading{
+    margin-top: 10px;
+  }
+
+  .posts{
+    font-size: 16px;
+  }
+
+  .popular-time{
+    font-size: 14px;
+    color: gray;
+  }
+
+  .footer{
+    margin-bottom: 240px;
+  }
+}

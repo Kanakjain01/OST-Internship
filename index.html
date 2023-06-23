@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <!----------------------------------------------------------------------- NAVBAR------------------------------------------------------------------->
+    <nav class="navigation">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="#" class="flex items-center">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNdAQ6rKWWZwkOIfzRXvPvyHd_JSldzmvODw&usqp=CAU"
+            class="h-8 mr-3"
+            alt=""
+          />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap text-white"
+            >Diver</span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-multi-level"
+          type="button"
+          class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-multi-level"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-6 h-6"
+            aria-hidden="true"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 md:border-0"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 md:dark:bg-transparent"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"
+              >
+                Mega Menu
+                <svg
+                  class="w-5 h-5 ml-1"
+                  aria-hidden="true"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+              <!-- Dropdown menu -->
+              <div
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownLargeButton"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Dashboard</a
+                    >
+                  </li>
+                  <li aria-labelledby="dropdownNavbarLink">
+                    <button
+                      id="doubleDropdownButton"
+                      data-dropdown-toggle="doubleDropdown"
+                      data-dropdown-placement="right-start"
+                      type="button"
+                      class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Dropdown<svg
+                        aria-hidden="true"
+                        class="w-5 h-5"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                    <div
+                      id="doubleDropdown"
+                      class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                    >
+                      <ul
+                        class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                        aria-labelledby="doubleDropdownButton"
+                      >
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                            >Overview</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                            >My downloads</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                            >Billing</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                            >Rewards</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Earnings</a
+                    >
+                  </li>
+                </ul>
+                <div class="py-1">
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                    >Sign out</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Documentation</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Tipography</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >ShortCodes</a
+              >
+            </li>
+            <button
+              type="submit"
+              class="p-2.5 ml-2 text-sm font-medium text-white"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
+              <span class="sr-only">Search</span>
+            </button>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!----------------------------------------------------------------------SECOND--------------------------------------------------------------->
+   
+   
+    <div class="blogs">
+      <div class="blogs-list">
+        <div class="blog-item">
+          <div class="blog-heading">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1496243975092-6ec259c776e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4aG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
+            </div>
+            <div class="blog-title">
+              <div class="title">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Consequuntur autem odio neque adipisci quae
+              </div>
+              <br />
+              <div class="blog-time">
+                <div>
+                  <i class="fa-solid fa-calendar-days"></i>&nbsp;
+                  <h2>May 25 , 2023</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+            eveniet doloribus laboriosam, ipsum fuga recusandae totam, nihil a
+            esse vero doloremque dolorum voluptas nisi sed earum alias quos
+            repellendus distinctio?
+          </div>
+          <div class="row-list">
+            <div class="list">
+              <h2><a class="row">#</a> Affiliate Marketing</h2>
+            </div>
+            <div class="list">
+              <h2><a class="row text-blue-500">#</a> Ranking Search</h2>
+            </div>
+            <div class="list">
+              <h2><a class="row text-green-300">#</a> SEO News</h2>
+            </div>
+            <li class="py-3 sm:py-4">
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0">
+                  <img
+                    class="w-8 h-8 rounded-full"
+                    src="https://tricky-photoshop.com/wp-content/uploads/2017/08/final-1.png"
+                    alt="Neil image"
+                  />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p
+                    class="text-sm font-semibold text-gray-900 truncate dark:text-white"
+                  >
+                    Neil Sims
+                  </p>
+                  <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                    email@flowbite.com
+                  </p>
+                </div>
+                <span
+                  class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300"
+                >
+                  <span class="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
+                  Available
+                </span>
+              </div>
+            </li>
+          </div>
+          <div class="continue-btn"><button>Continue Reading</button></div>
+        </div>
+        <div class="blog-item">
+          <div class="blog-heading">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1496243975092-6ec259c776e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4aG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
+            </div>
+            <div class="blog-title">
+              <div class="title">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Consequuntur autem odio neque adipisci quae
+              </div>
+              <br />
+              <div class="blog-time">
+                <div>
+                  <i class="fa-solid fa-calendar-days"></i>&nbsp;
+                  <h2>May 25 , 2023</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+            eveniet doloribus laboriosam, ipsum fuga recusandae totam, nihil a
+            esse vero doloremque dolorum voluptas nisi sed earum alias quos
+            repellendus distinctio?
+          </div>
+          <div class="row-list">
+            <div class="list">
+              <h2><a class="row">#</a> Affiliate Marketing</h2>
+            </div>
+            <div class="list">
+              <h2><a class="row text-blue-500">#</a> Ranking Search</h2>
+            </div>
+            <div class="list">
+              <h2><a class="row text-green-300">#</a> SEO News</h2>
+            </div>
+            <li class="py-3 sm:py-4 ">
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0">
+                  <img
+                    class="w-8 h-8 rounded-full"
+                    src="https://tricky-photoshop.com/wp-content/uploads/2017/08/final-1.png"
+                    alt="Neil image"
+                  />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p
+                    class="text-sm font-semibold text-gray-900 truncate dark:text-white"
+                  >
+                    Neil Sims
+                  </p>
+                  <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                    email@flowbite.com
+                  </p>
+                </div>
+                <span
+                  class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300"
+                >
+                  <span class="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
+                  Available
+                </span>
+              </div>
+            </li>
+          </div>
+          <div class="continue-btn"><button>Continue Reading</button></div>
+        </div>
+        <div class="blog-item">
+          <div class="blog-heading">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1496243975092-6ec259c776e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4aG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
+            </div>
+            <div class="blog-title">
+              <div class="title">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Consequuntur autem odio neque adipisci quae
+              </div>
+              <br />
+              <div class="blog-time">
+                <div>
+                  <i class="fa-solid fa-calendar-days"></i>&nbsp;
+                  <h2>May 25 , 2023</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+            eveniet doloribus laboriosam, ipsum fuga recusandae totam, nihil a
+            esse vero doloremque dolorum voluptas nisi sed earum alias quos
+            repellendus distinctio?
+          </div>
+          <div class="row-list">
+            <div class="list">
+              <h2><a class="row">#</a> Affiliate Marketing</h2>
+            </div>
+            <div class="list">
+              <h2><a class="row text-blue-500">#</a> Ranking Search</h2>
+            </div>
+            <div class="list">
+              <h2><a class="row text-green-300">#</a> SEO News</h2>
+            </div>
+            <li class="py-3 sm:py-4">
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0">
+                  <img
+                    class="w-8 h-8 rounded-full"
+                    src="https://tricky-photoshop.com/wp-content/uploads/2017/08/final-1.png"
+                    alt="Neil image"
+                  />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p
+                    class="text-sm font-semibold text-gray-900 truncate dark:text-white"
+                  >
+                    Neil Sims
+                  </p>
+                  <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                    email@flowbite.com
+                  </p>
+                </div>
+                <span
+                  class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300"
+                >
+                  <span class="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
+                  Available
+                </span>
+              </div>
+            </li>
+          </div>
+          <div class="continue-btn"><button>Continue Reading</button></div>
+        </div>
+        <div class="blog-item">
+          <div class="blog-heading">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1496243975092-6ec259c776e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4aG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
+            </div>
+            <div class="blog-title">
+              <div class="title">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Consequuntur autem odio neque adipisci quae
+              </div>
+              <br />
+              <div class="blog-time">
+                <div>
+                  <i class="fa-solid fa-calendar-days"></i>&nbsp;
+                  <h2>May 25 , 2023</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+            eveniet doloribus laboriosam, ipsum fuga recusandae totam, nihil a
+            esse vero doloremque dolorum voluptas nisi sed earum alias quos
+            repellendus distinctio?
+          </div>
+          <div class="row-list">
+            <div class="list">
+              <h2><a class="row">#</a> Affiliate Marketing</h2>
+            </div>
+            <div class="list">
+              <h2><a class="row text-blue-500">#</a> Ranking Search</h2>
+            </div>
+            <div class="list">
+              <h2><a class="row text-green-300">#</a> SEO News</h2>
+            </div>
+            <li class="py-3 sm:py-4">
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0">
+                  <img
+                    class="w-8 h-8 rounded-full"
+                    src="https://tricky-photoshop.com/wp-content/uploads/2017/08/final-1.png"
+                    alt="Neil image"
+                  />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p
+                    class="text-sm font-semibold text-gray-900 truncate dark:text-white"
+                  >
+                    Neil Sims
+                  </p>
+                  <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                    email@flowbite.com
+                  </p>
+                </div>
+                <span
+                  class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300"
+                >
+                  <span class="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
+                  Available
+                </span>
+              </div>
+            </li>
+          </div>
+          <div class="continue-btn"><button>Continue Reading</button></div>
+        </div>
+        <div class="blog-item">
+          <div class="blog-heading">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1496243975092-6ec259c776e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4aG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
+            </div>
+            <div class="blog-title">
+              <div class="title">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Consequuntur autem odio neque adipisci quae
+              </div>
+              <br />
+              <div class="blog-time">
+                <div>
+                  <i class="fa-solid fa-calendar-days"></i>&nbsp;
+                  <h2>May 25 , 2023</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+            eveniet doloribus laboriosam, ipsum fuga recusandae totam, nihil a
+            esse vero doloremque dolorum voluptas nisi sed earum alias quos
+            repellendus distinctio?
+          </div>
+          <div class="row-list">
+            <div class="list">
+              <h2><a class="row">#</a> Affiliate Marketing</h2>
+            </div>
+            <div class="list">
+              <h2><a class="row text-blue-500">#</a> Ranking Search</h2>
+            </div>
+            <div class="list">
+              <h2><a class="row text-green-300">#</a> SEO News</h2>
+            </div>
+            <li class="py-3 sm:py-4">
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0">
+                  <img
+                    class="w-8 h-8 rounded-full"
+                    src="https://tricky-photoshop.com/wp-content/uploads/2017/08/final-1.png"
+                    alt="Neil image"
+                  />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p
+                    class="text-sm font-semibold text-gray-900 truncate dark:text-white"
+                  >
+                    Neil Sims
+                  </p>
+                  <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                    email@flowbite.com
+                  </p>
+                </div>
+                <span
+                  class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300"
+                >
+                  <span class="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
+                  Available
+                </span>
+              </div>
+            </li>
+          </div>
+          <div class="continue-btn"><button>Continue Reading</button></div>
+        </div>
+        <div class="blog-item">
+          <div class="blog-heading">
+            <div class="blog-image">
+              <img
+                src="https://images.unsplash.com/photo-1496243975092-6ec259c776e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4aG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
+            </div>
+            <div class="blog-title">
+              <div class="title">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Consequuntur autem odio neque adipisci quae
+              </div>
+              <br />
+              <div class="blog-time">
+                <div>
+                  <i class="fa-solid fa-calendar-days"></i>&nbsp;
+                  <h2>May 25 , 2023</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
+            eveniet doloribus laboriosam, ipsum fuga recusandae totam, nihil a
+            esse vero doloremque dolorum voluptas nisi sed earum alias quos
+            repellendus distinctio?
+          </div>
+          <div class="row-list">
+            <div class="list">
+              <h2><a class="row">#</a> Affiliate Marketing</h2>
+            </div>
+            <div class="list">
+              <h2><a class="row text-blue-500">#</a> Ranking Search</h2>
+            </div>
+            <div class="list">
+              <h2><a class="row text-green-300">#</a> SEO News</h2>
+            </div>
+            <li class="py-3 sm:py-4">
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0">
+                  <img
+                    class="w-8 h-8 rounded-full"
+                    src="https://tricky-photoshop.com/wp-content/uploads/2017/08/final-1.png"
+                    alt="Neil image"
+                  />
+                </div>
+                <div class="flex-1 min-w-0">
+                  <p
+                    class="text-sm font-semibold text-gray-900 truncate dark:text-white"
+                  >
+                    Neil Sims
+                  </p>
+                  <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                    email@flowbite.com
+                  </p>
+                </div>
+                <span
+                  class="inline-flex items-center bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300"
+                >
+                  <span class="w-2 h-2 mr-1 bg-green-500 rounded-full"></span>
+                  Available
+                </span>
+              </div>
+            </li>
+          </div>
+          <div class="continue-btn"><button>Continue Reading</button></div>
+        </div>
+      </div>
+      <div class="events">
+        <div class="events-list">
+          <div class="event-item">
+            <div class="event-image flex items-center">
+              <h1 class="">Labels</h1>
+              <hr
+                class="w-80 h-1 mx-auto my-4 border-0 rounded-full md:my-10 dark:bg-red-700"
+              />
+            </div>
+            <div class="event-description">
+              <div class="right-list">
+                <div class="lists">
+                  <h2>
+                    <a class="right text-yellow-300">#</a> Affiliate Marketing
+                  </h2>
+                </div>
+                <div class="lists">
+                  <h2><a class="right text-blue-500">#</a> Ranking Search</h2>
+                </div>
+              </div>
+              <div class="right-list">
+                <div class="lists">
+                  <h2>
+                    <a class="right text-green-300">#</a> Affiliate Marketing
+                  </h2>
+                </div>
+                <div class="lists">
+                  <h2><a class="right text-purple-700">#</a> Ranking Search</h2>
+                </div>
+
+                <div class="lists">
+                  <h2><a class="right text-red-500">#</a> Ranking Search</h2>
+                </div>
+              </div>
+
+              <div class="right-list">
+                <div class="lists">
+                  <h2><a class="right">#</a> Affiliate Marketing</h2>
+                </div>
+                <div class="lists">
+                  <h2><a class="right text-blue-500">#</a> Ranking Search</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="events-list mt-6">
+          <div class="event-item1">
+            <div class="event-image flex items-center">
+              <h1 class="w-32 lg:w-44 text-[1rem]">Social Plugin</h1>
+              <hr
+                class=" w-44 lg:w-56 h-1 mx-auto my-4 border-0 rounded-full md:my-10 dark:bg-red-700"
+              />
+            </div>
+            <div class="event-description">
+              <div class="right-list1">
+                <div class="lists1">
+                  <img
+                    class=""
+                    src="https://www.freepnglogos.com/uploads/logo-facebook-png/logo-facebook-facebook-logo-png-transparent-svg-vector-bie-supply-13.png"
+                    alt=""
+                  />
+                </div>
+                <div class="lists1">
+                  <img
+                    src="https://hindubabynames.info/downloads/wp-content/themes/hbn_download/download/social-media/whatsapp-logo.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="right-list1">
+                <div class="lists1">
+                  <img
+                    src="https://www.pngplay.com/wp-content/uploads/1/Instagram-Logo-PNG-Images-HD.png"
+                    alt=""
+                  />
+                </div>
+                <div class="lists1">
+                  <img
+                    src="https://1000logos.net/wp-content/uploads/2023/01/LinkedIn-Logo-2019.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!------------------------------------NEWS FEED------------------------------------------->
+
+        <div class="newsfeed mt-6">
+          <div class="newsfeed-heading flex items-center">
+            <h2 class="w-44">News Feeds</h2>
+            <hr
+              class="w-56 h-1 mx-auto my-4 border-0 rounded-full md:my-10 dark:bg-red-700"
+            />
+          </div>
+          <div class="news mt-4">
+            <img
+              class="news-image"
+              src="data:image/jpeg;base64,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"
+              alt="News Image"
+            />
+            <div class="news-content">
+              <h2 class="news-title text-blue-700">Breaking News</h2>
+              <p class="news-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                fermentum metus eu sagittis ultrices.
+              </p>
+              <span class="news-date">June 18, 2023</span>
+            </div>
+          </div>
+
+          <div class="news mt-4">
+            <img
+              class="news-image"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRmE390D3YVEMmdy_un0qryMxwqnNF9nnHIg&usqp=CAU"
+              alt="News Image"
+            />
+            <div class="news-content">
+              <h2 class="news-title text-green-800">Latest Update</h2>
+              <p class="news-description">
+                Vestibulum rhoncus ex ligula, id euismod turpis fermentum a.
+                Phasellus vitae arcu ut felis varius pulvinar.
+              </p>
+              <span class="news-date">June 17, 2023</span>
+            </div>
+          </div>
+          <div class="news mt-4">
+            <img
+              class="news-image"
+              src="data:image/jpeg;base64,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"
+              alt="News Image"
+            />
+            <div class="news-content">
+              <h2 class="news-title text-purple-700">Breaking News</h2>
+              <p class="news-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                fermentum metus eu sagittis ultrices.
+              </p>
+              <span class="news-date">June 18, 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <!-------------------------POPULAR POSTS---------------------->
+        <div class="popular-item mt-6">
+          <div class="popular-heading flex items-center">
+            <h2 class="w-44">Upcoming Events</h2>
+            <hr
+              class="w-56 h-1 mx-auto my-4 border-0 rounded-full md:my-10 dark:bg-red-700"
+            />
+          </div>
+          <div class="post-heading mt-10">
+            <div class="popular-image">
+              <img
+                src="https://images.unsplash.com/photo-1496243975092-6ec259c776e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4aG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
+            </div>
+            <div class="popular-title">
+              <div class="popular-list">
+                <h2>
+                  <a class="popular-row text-yellow-300">#</a> Affiliate
+                  Marketing
+                </h2>
+              </div>
+              <div class="posts">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+              </div>
+              
+              <div class="popular-time">
+                <div>
+                  <i class="fa-solid fa-calendar-days"></i>&nbsp;
+
+                  <h2>May 25 , 2023</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-heading mt-4">
+            <div class="popular-image">
+              <img
+                src="https://images.unsplash.com/photo-1496243975092-6ec259c776e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4aG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
+            </div>
+            <div class="popular-title">
+              <div class="popular-list">
+                <h2>
+                  <a class="popular-row text-yellow-300">#</a> Affiliate
+                  Marketing
+                </h2>
+              </div>
+              <div class="posts">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+              </div>
+            
+              <div class="popular-time">
+                <div>
+                  <i class="fa-solid fa-calendar-days"></i>&nbsp;
+
+                  <h2>May 25 , 2023</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-heading mt-4">
+            <div class="popular-image">
+              <img
+                src="https://images.unsplash.com/photo-1496243975092-6ec259c776e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4aG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
+            </div>
+            <div class="popular-title">
+              <div class="popular-list">
+                <h2>
+                  <a class="popular-row text-yellow-300">#</a> Affiliate
+                  Marketing
+                </h2>
+              </div>
+              <div class="posts">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+              </div>
+              
+              <div class="popular-time">
+                <div>
+                  <i class="fa-solid fa-calendar-days"></i>&nbsp;
+
+                  <h2>May 25 , 2023</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="post-heading mt-4">
+            <div class="popular-image">
+              <img
+                src="https://images.unsplash.com/photo-1496243975092-6ec259c776e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4aG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                alt=""
+              />
+            </div>
+            <div class="popular-title">
+              <div class="popular-list">
+                <h2>
+                  <a class="popular-row text-yellow-300">#</a> Affiliate
+                  Marketing
+                </h2>
+              </div>
+              <div class="posts">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+              </div>
+            
+              <div class="popular-time">
+                <div>
+                  <i class="fa-solid fa-calendar-days"></i>&nbsp;
+
+                  <h2>May 25 , 2023</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!----------------------STAY INFORMED---------------------------->
+        <div class="stay-informed mt-6">
+          <div class="stay">
+            <div class="bg-orange-900 rounded-full px-4 py-4">
+              <img
+                class="w-10 mt-0"
+                src="https://cdn-icons-png.flaticon.com/512/3602/3602145.png"
+                alt=""
+              />
+            </div>
+            <div class="titles">
+              <h1>Stay Informed</h1>
+              <h2>Get Notified About Next Update Direct to Your Inbox</h2>
+            </div>
+            <div class="buttons text-center">
+              <input
+                class="bg-gray-700"
+                type="email"
+                name="Email Address"
+                id=""
+                placeholder="Email Address"
+              />
+              <br />
+              <button
+                type="button"
+                class="text-white mt-5 bg-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                disabled
+              >
+                SUBSCRIBE
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- -------------------JOBS--------------- -->
+        <div class="travel-post mt-6">
+          <div class="travel-heading flex items-center">
+            <h2 class="w-44">Jobs</h2>
+            <hr
+              class="w-56 h-1 mx-auto my-4 border-0 rounded-full md:my-10 dark:bg-red-700"
+            />
+          </div>
+          <div class="travelled mt-6">
+            <div class="travel-heading">
+              <div class="travel-image">
+                <img
+                  src="https://images.unsplash.com/photo-1496243975092-6ec259c776e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4aG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  alt=""
+                />
+              </div>
+              <div class="travel-title">
+                <div class="travel-list">
+                  <h2>
+                    <a class="travel-row text-yellow-300">#</a> Affiliate
+                    Marketing
+                  </h2>
+                </div>
+                <div class="travelling">Lorem ipsum dolor sng elit...</div>
+
+                <div class="travel-time mt-4">
+                  <div>
+                    <i class="fa-solid fa-calendar-days"></i>&nbsp;
+                    <h2>May 25 , 2023</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="travel-heading">
+              <div class="travel-image">
+                <img
+                  src="https://images.unsplash.com/photo-1496243975092-6ec259c776e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4aG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  alt=""
+                />
+              </div>
+              <div class="travel-title">
+                <div class="travel-list">
+                  <h2>
+                    <a class="travel-row text-yellow-300">#</a> Affiliate
+                    Marketing
+                  </h2>
+                </div>
+                <div class="travelling">Lorem ipsum dolor sng elit...</div>
+
+                <div class="travel-time mt-4">
+                  <div>
+                    <i class="fa-solid fa-calendar-days"></i>&nbsp;
+                    <h2>May 25 , 2023</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="travelled mt-6">
+            <div class="travel-heading">
+              <div class="travel-image">
+                <img
+                  src="https://images.unsplash.com/photo-1496243975092-6ec259c776e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4aG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  alt=""
+                />
+              </div>
+              <div class="travel-title">
+                <div class="travel-list">
+                  <h2>
+                    <a class="travel-row text-yellow-300">#</a> Affiliate
+                    Marketing
+                  </h2>
+                </div>
+                <div class="travelling">Lorem ipsum dolor sng elit...</div>
+
+                <div class="travel-time mt-4">
+                  <div>
+                    <i class="fa-solid fa-calendar-days"></i>&nbsp;
+                    <h2>May 25 , 2023</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="travel-heading">
+              <div class="travel-image">
+                <img
+                  src="https://images.unsplash.com/photo-1496243975092-6ec259c776e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGV4aG5vbG9neXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                  alt=""
+                />
+              </div>
+              <div class="travel-title">
+                <div class="travel-list">
+                  <h2>
+                    <a class="travel-row text-yellow-300">#</a> Affiliate
+                    Marketing
+                  </h2>
+                </div>
+                <div class="travelling">Lorem ipsum dolor sng elit...</div>
+
+                <div class="travel-time mt-4">
+                  <div>
+                    <i class="fa-solid fa-calendar-days"></i>&nbsp;
+                    <h2>May 25 , 2023</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--------------------------FOOTER--------------------------->
+
+    <footer class="footer mt-28">
+      <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div class="md:flex md:justify-between">
+          <div class="mb-6 md:mb-0">
+            <a href="/" class="flex items-center">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNdAQ6rKWWZwkOIfzRXvPvyHd_JSldzmvODw&usqp=CAU"
+                class="h-8 mr-3"
+                alt="FlowBite Logo"
+              />
+              <span
+                class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+                >Diver</span
+              >
+            </a>
+          </div>
+          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+              <h2 class="mb-6 text-sm font-semibold uppercase dark:text-white">
+                Resources
+              </h2>
+              <ul class="text-gray-600 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="/" class="hover:underline">Career</a>
+                </li>
+                <li>
+                  <a href="/" class="hover:underline">Tailwind CSS</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="mb-6 text-sm font-semibold uppercase dark:text-white">
+                Follow us
+              </h2>
+              <ul class="text-gray-600 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="/" class="hover:underline">Github</a>
+                </li>
+                <li>
+                  <a href="/" class="hover:underline">Discord</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2
+                class="mb-6 text-sm font-semibold  uppercase dark:text-white"
+              >
+                Legal
+              </h2>
+              <ul class="text-gray-600 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                  <a href="#" class="hover:underline">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+            >© 2023 <a href="/" class="hover:underline">Diver</a>. All Rights
+            Reserved.
+          </span>
+          <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Facebook page</span>
+            </a>
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Instagram page</span>
+            </a>
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                />
+              </svg>
+              <span class="sr-only">Twitter page</span>
+            </a>
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">GitHub account</span>
+            </a>
+            <a
+              href="#"
+              class="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Dribbble account</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
